@@ -34,7 +34,7 @@ namespace Rating_App
             {
                 this.Close();
                 Admin admin = new Admin();
-                admin.Show();
+                admin.ShowDialog();
             }
         }
     }

@@ -1,5 +1,4 @@
-﻿using Rating_App.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -9,25 +8,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Rating_App
 {
     /// <summary>
-    /// Interaction logic for Config.xaml
+    /// Interaction logic for SlideForm.xaml
     /// </summary>
-    public partial class Config : Page
+    public partial class SlideForm : Window
     {
-        public Config()
+        public SlideForm()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
         {
-            SlideForm form = new SlideForm();
-            form.ShowDialog();
+            rbn_video.IsChecked = false;
+            rbn_image.IsChecked = false;
+            RadioButton rbn = sender as RadioButton;
+            rbn.IsChecked = true;
         }
     }
 }

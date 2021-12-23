@@ -20,20 +20,26 @@ namespace Rating_App
         public Admin()
         {
             InitializeComponent();
+            Press_Control("btn_config");
         }
 
         private void Press_Control(string Name)
         {
-            btn_config_accout.Background = Brushes.White;
-            btn_config_slide.Background = Brushes.White;
+            btn_config.Background = Brushes.Navy;
+            btn_config_slide.Background = Brushes.Navy;
+            //foreground
+            btn_config.Foreground = Brushes.White;
+            btn_config_slide.Foreground = Brushes.White;
 
             switch (Name)
             {
-                case "btn_config_accout":
-                    btn_config_accout.Background = Brushes.LightSkyBlue;
+                case "btn_config":
+                    btn_config.Background = Brushes.White;
+                    btn_config.Foreground = Brushes.Navy;
                     return;
                 case "btn_config_slide":
-                    btn_config_slide.Background = Brushes.LightSkyBlue;
+                    btn_config_slide.Background = Brushes.White;
+                    btn_config_slide.Foreground = Brushes.Navy;
                     return;
             }
         }

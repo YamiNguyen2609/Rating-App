@@ -31,7 +31,7 @@
             <Label FontSize="14" VerticalAlignment="Center" Grid.Column="0">Password</Label>
             <PasswordBox Grid.Column="1"  PasswordChar="*" Name="txt_password" Width="300" Style="{DynamicResource passwordbox}"/>
         </Grid>
-        <Button Margin="0,10" Background="SkyBlue" VerticalAlignment="Top" Grid.Row="2" Name="btn_login" Click="Btn_login_Click"
+        <Button Margin="0,10" Background="SkyBlue" Foreground="White" VerticalAlignment="Top" Grid.Row="2" Name="btn_login" Click="Btn_login_Click"
             Style="{DynamicResource button}" Content="Đăng nhập"/>
     </Grid>
 </Window>

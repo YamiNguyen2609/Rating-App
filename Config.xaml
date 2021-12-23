@@ -5,19 +5,20 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rating_App"
       mc:Ignorable="d" 
-      Title="Config">
+      Title="Config" d:Height="300" Background="WhiteSmoke">
 
-    <Grid>
-        <Button>Thêm</Button>
-        <StackPanel>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="60"/>
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </StackPanel>
+    <Grid Style="{DynamicResource container}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button HorizontalAlignment="Right" Grid.Row="0" Width="50" Height="30" Click="Button_Click">Thêm</Button>
+        <DataGrid Grid.Row="1" Name="list_item" Background="White" BorderThickness="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="2*" Header="Đường Dẫn"></DataGridTextColumn>
+                <DataGridTextColumn Width="1*" Header="Loại hình"></DataGridTextColumn>
+                <DataGridTextColumn Width="100" Header="Vị trí"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

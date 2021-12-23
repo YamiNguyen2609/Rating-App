@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Admin" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0">
-            <Button Name="btn_config_accout" 
+        <StackPanel Grid.Row="0" Background="Navy">
+            <Button Name="btn_config"
                     Style="{DynamicResource button_tab}" Content="Cấu hình hệ thống"
                     Click="Btn_tab_Click"/>
             <Button 
