@@ -7,7 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\ic-home.png" />
+    <None Remove="images\ic-zoom.png" />
+    <None Remove="images\man-hinh-khao-sat.jpg" />
+    <None Remove="images\man-hinh-khao-sat.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Slide\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\ic-home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\man-hinh-khao-sat.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

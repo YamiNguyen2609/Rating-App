@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Project\c#\Rating-App\obj\Debug\netcoreapp3.1\
+C:\Projects\Rating_App\obj\Debug\netcoreapp3.1\
 Rating_App
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Project\c#\Rating-App\App.xaml
+C:\Projects\Rating_App\App.xaml
 61177509666
 
-101034480116
-2162013648860
+11-662153615
+216-167310349
 Admin.xaml;Config.xaml;Login.xaml;Main.xaml;SlideForm.xaml;Templates.xaml;
 
 False

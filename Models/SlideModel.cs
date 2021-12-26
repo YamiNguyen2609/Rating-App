@@ -8,7 +8,7 @@ namespace Rating_App.Models
     public class SlideModel
     {
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [MaxLength(256)]
         public string Path { get; set; }
@@ -18,5 +18,13 @@ namespace Rating_App.Models
         [Required]
         [MaxLength(1)]
         public int Index { get; set; }
+    }
+
+    public class SlideViewModel
+    {
+        public int Id { get; set; }
+        public string Path { get; set; }
+        public int Index { get; set; }
+        public string Type { get; set; }
     }
 }

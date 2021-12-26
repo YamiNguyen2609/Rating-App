@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Rating_App.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +21,13 @@ namespace Rating_App
     {
         public Admin()
         {
+            using var db = new ModelContext();
+            string dbName = "cms.db";
+            if (!File.Exists(dbName))
+            {
+                db.Database.EnsureCreated();
+            }
+
             InitializeComponent();
             Press_Control("btn_config");
         }

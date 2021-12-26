@@ -22,6 +22,9 @@ namespace Rating_App
         public Login()
         {
             InitializeComponent();
+
+            window.Width = SystemParameters.PrimaryScreenWidth /2;
+            window.Height = SystemParameters.PrimaryScreenHeight / 2;
         }
 
         private void Btn_login_Click(object sender, RoutedEventArgs e)
@@ -36,6 +39,13 @@ namespace Rating_App
                 Admin admin = new Admin();
                 admin.ShowDialog();
             }
+        }
+
+        private void panel_Loaded(object sender, RoutedEventArgs e)
+        {
+            txt_username.FontSize = panel.RowDefinitions[3].ActualHeight / 2;
+            txt_password.FontSize = panel.RowDefinitions[5].ActualHeight / 2;
+            btn_login.FontSize = panel.RowDefinitions[7].ActualHeight / 2;
         }
     }
 }

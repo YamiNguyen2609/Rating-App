@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         ResizeMode="NoResize"
+         WindowState="Maximized"
         Title="Admin" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>

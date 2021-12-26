@@ -10,6 +10,8 @@ namespace Rating_App.Models
 
         public DbSet<SlideModel> SlideModel { get; set; }
 
+        public DbSet<RatingModel> RatingModel { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             _ = options.UseSqlite("FileName=cms.db");
@@ -33,6 +35,16 @@ namespace Rating_App.Models
                 entity.HasIndex(e => e.Path);
                 entity.HasIndex(e => e.Type);
                 entity.HasIndex(e => e.Index);
+            });
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<RatingModel>().ToTable("Rating");
+            modelBuilder.Entity<RatingModel>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.HasIndex(e => e.Type);
+                entity.HasIndex(e => e.State);
+                entity.HasIndex(e => e.CreateAt);
             });
             base.OnModelCreating(modelBuilder);
         }

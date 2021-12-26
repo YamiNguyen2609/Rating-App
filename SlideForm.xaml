@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-         Title="Trình chiếu" Width="500" Height="350" >
+         Title="Trình chiếu" Width="500" Height="270" Closed="Window_Closed">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
             <RowDefinition Height="75"/>
             <RowDefinition Height="75"/>
             <RowDefinition Height="1*"/>
@@ -20,31 +19,20 @@
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label FontSize="14" VerticalAlignment="Center" Grid.Column="0">Username</Label>
-            <TextBox Name="txt_path" Grid.Column="1" Width="300" Style="{DynamicResource textbox}"/>
+            <Label FontSize="14" VerticalAlignment="Center" Grid.Column="0">Đường dẫn</Label>
+            <Button Name="btn_path" Grid.Column="1" Width="300" Click="btn_path_Click" Style="{DynamicResource button_file}">
+                <Grid Margin="10,0,0,0">
+                    <TextBlock x:Name="txt_path" Text="Chọn File"/>
+                </Grid>
+            </Button>
         </Grid>
         <Grid Grid.Row="1"  Margin="40,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label FontSize="14" VerticalAlignment="Center" Grid.Column="0">Loại hình</Label>
-            <StackPanel Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition  Width="150"/>
-                    </Grid.ColumnDefinitions>
-                    <Viewbox Height="25"  Grid.Column="0">
-                        <RadioButton x:Name="rbn_image" Click="RadioButton_Click" IsChecked="True">Hình ảnh</RadioButton>
-                    </Viewbox>
-                    <Viewbox Height="25" Grid.Column="1">
-                        <RadioButton x:Name="rbn_video" Click="RadioButton_Click">Video</RadioButton>
-                    </Viewbox>
-                </Grid>
-            </StackPanel>
         </Grid>
-        <Button Margin="0,10" Background="SkyBlue" Foreground="White" VerticalAlignment="Top" Grid.Row="2" Name="btn_login"
-            Style="{DynamicResource button}" Content="Đăng nhập"/>
+        <Button Margin="0,10" Background="SkyBlue" Foreground="White" VerticalAlignment="Top" Grid.Row="2" Name="btn_submit" Click="btn_submit_Click"
+            Style="{DynamicResource button}" Content="Thêm"/>
     </Grid>
 </Window>
