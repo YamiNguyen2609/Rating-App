@@ -34,21 +34,16 @@ namespace Rating_App
 
         private void Press_Control(string Name)
         {
-            btn_config.Background = Brushes.Navy;
-            btn_config_slide.Background = Brushes.Navy;
-            //foreground
-            btn_config.Foreground = Brushes.White;
-            btn_config_slide.Foreground = Brushes.White;
+            btn_config.Background = Brushes.LightGray;
+            btn_config_slide.Background = Brushes.LightGray;
 
             switch (Name)
             {
                 case "btn_config":
                     btn_config.Background = Brushes.White;
-                    btn_config.Foreground = Brushes.Navy;
                     return;
                 case "btn_config_slide":
                     btn_config_slide.Background = Brushes.White;
-                    btn_config_slide.Foreground = Brushes.Navy;
                     return;
             }
         }
@@ -56,7 +51,25 @@ namespace Rating_App
         private void Btn_tab_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            panel.Source = new Uri(btn.Tag.ToString(), UriKind.Relative);
             Press_Control(btn.Name);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            double height = SystemParameters.PrimaryScreenHeight;
+
+            btn_config.Height = height / 10;
+            btn_config_slide.Height = height / 10;
+
+            btn_config.FontSize = btn_config_slide.ActualHeight / 2;
+            btn_config_slide.FontSize = btn_config_slide.ActualHeight / 2;
+            btn_exit.FontSize = btn_exit.ActualHeight / 2;
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

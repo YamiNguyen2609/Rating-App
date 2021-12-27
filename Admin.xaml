@@ -7,21 +7,26 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
          WindowState="Maximized"
-        Title="Admin" Height="450" Width="800">
+        Width="1000"
+        Height="1000"
+        Title="Admin" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Background="Navy">
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="LightGray">
             <Button Name="btn_config"
                     Style="{DynamicResource button_tab}" Content="Cấu hình hệ thống"
-                    Click="Btn_tab_Click"/>
+                    Click="Btn_tab_Click" Tag="Config.xaml"/>
             <Button 
                 Name="btn_config_slide" 
-               Style="{DynamicResource button_tab}" Content="Danh sách"
+               Style="{DynamicResource button_tab}" Tag="Rating.xaml" Content="Danh sách đánh giá"
                     Click="Btn_tab_Click"/>
+            <Button 
+                Name="btn_exit" 
+               Style="{DynamicResource button_tab}" Content="Thoát ứng dụng" Click="btn_exit_Click"/>
         </StackPanel>
-        <Frame Grid.Column="1" Source="Config.xaml"/>
+        <Frame Grid.Column="1" NavigationUIVisibility="Hidden" x:Name="panel" Source="Config.xaml"/>
     </Grid>
 </Window>

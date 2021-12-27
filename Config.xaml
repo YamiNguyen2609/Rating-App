@@ -5,40 +5,68 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Rating_App"
       mc:Ignorable="d" 
-      Title="Config" d:Height="300" Background="WhiteSmoke">
+      Title="Config" d:Height="300" Background="WhiteSmoke" Loaded="Page_Loaded">
 
-    <Grid Style="{DynamicResource container}">
+    <Grid Style="{DynamicResource container}" Name="panel">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.01*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.01*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="0.01*"/>
+            <RowDefinition Height="0.08*"/>
+            <RowDefinition Height="0.01*"/>
             <RowDefinition />
+            <RowDefinition Height="0.01*"/>
         </Grid.RowDefinitions>
-        <Button HorizontalAlignment="Right" Grid.Row="0" Height="45" Click="Button_Click" Content="+ Thêm File" Style="{DynamicResource button}" Background="SkyBlue"/>
-        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" Name="list_item" Background="White" BorderThickness="0">
+        <Button x:Name="btn" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" Click="Button_Click" Content="+ Thêm File" Style="{DynamicResource button}" Background="SkyBlue"/>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Name="list_item" Background="White" BorderThickness="0">
+            <!--<DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                                <TextBlock VerticalAlignment="Center" FontSize="50" Text="{TemplateBinding Header}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>-->
             <DataGrid.Columns>
-                <DataGridTemplateColumn Width="2*" Header="Tên file">
+                <DataGridTemplateColumn Width="1*" CanUserResize="True" Header="Tên file">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock VerticalAlignment="Center" Text="{Binding Path=Path}" />
+                            <TextBlock Margin="20, 0" VerticalAlignment="Center" FontSize="50" Text="{Binding Path=Path}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="1*" Header="Loại hình">
+                <DataGridTemplateColumn Width="1*" CanUserResize="False" Header="Loại hình">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Path=Type}" />
+                            <TextBlock Margin="20, 0" VerticalAlignment="Center" FontSize="50" Text="{Binding Path=Type}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="0.5*" Header="">
+                <DataGridTemplateColumn Width="0.75*" CanUserResize="False" Header="">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.1*"/>
                                     <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="0.2*"/>
                                     <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="0.1*"/>
                                 </Grid.ColumnDefinitions>
-                                <Button Grid.Column="0" Name="btn_update" Click="btn_update_Click" Tag="{Binding Path=Id}" Margin="0, 10" Width="100" Height="50" Content="Chỉnh sửa" Style="{DynamicResource button}" Background="LightBlue" />
-                                <Button Grid.Column="1" Name="btn_remove" Click="btn_remove_Click" HorizontalAlignment="Center" Tag="{Binding Path=Id}" Margin="0, 10" Width="100" Height="50"  Content="Xóa" Style="{DynamicResource button}" Background="LightSalmon" />
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                </Grid.RowDefinitions>
+                                <Button Grid.Column="1" Grid.Row="1" Name="btn_update" Click="btn_update_Click" Tag="{Binding Path=Id}" Content="Chỉnh sửa" Style="{DynamicResource button}" Background="LightBlue" />
+                                <Button Grid.Column="3" Grid.Row="1" Name="btn_remove" Click="btn_remove_Click" Tag="{Binding Path=Id}"  Content="Xóa" Style="{DynamicResource button}" Background="LightSalmon" />
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

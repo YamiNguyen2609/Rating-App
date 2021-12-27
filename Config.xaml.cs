@@ -71,5 +71,12 @@ namespace Rating_App
 
             Refresh();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            double size = panel.RowDefinitions[1].ActualHeight / 2;
+            btn.FontSize = size;
+            list_item.FontSize = size / 2;
+        }
     }
 }

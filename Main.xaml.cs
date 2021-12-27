@@ -27,7 +27,7 @@ namespace Rating_App
         private SlideModel CurrentItem;
         private int CurrentIndex = -1;
         private System.Timers.Timer interval;
-
+        private DateTime Expried;
         public Main()
         {
             using var db = new ModelContext();
@@ -38,13 +38,20 @@ namespace Rating_App
             }
             if (!db.ConfigModel.Any())
             {
+                Expried = DateTime.Parse(DateTime.Now.AddYears(2).ToString("yyyy-MM-dd 23:59:59"));
+
                 db.ConfigModel.AddRange(new ConfigModel[]
                 {
                     new ConfigModel{Key = "username", Value = "admin"},
                     new ConfigModel{Key = "password", Value = "password"},
+                    new ConfigModel{Key = "expried", Value = Expried.ToString("yyyy-MM-dd HH:mm:ss")},
                 });
 
                 db.SaveChanges();
+            }
+            else
+            {
+                Expried = DateTime.Parse(db.ConfigModel.Find(new string[] { "expried" }).Value);
             }
 
 
@@ -54,6 +61,14 @@ namespace Rating_App
             btn.Height = SystemParameters.PrimaryScreenHeight;
 
             OnMove();
+
+            interval = new System.Timers.Timer()
+            {
+                Interval = TimeSpan.FromSeconds(10).TotalSeconds * 1000,
+                Enabled = true
+            };
+
+            interval.Elapsed += this.Execute;
         }
 
         private void Btn_home_Click(object sender, RoutedEventArgs e)
@@ -174,12 +189,31 @@ namespace Rating_App
             {
                 Id = Id,
                 Type = spl[0],
-                State = spl[1] == 1
+                State = spl[1] == 1,
+                CreateAt = DateTime.Now
             };
+
+            db.RatingModel.Add(model);
 
             db.SaveChanges();
 
             panel_rating.Visibility = Visibility.Hidden;
         }
+
+        private void Execute(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            if(DateTime.Now >= Expried)
+            {
+                string x = "";
+            }
+        }
+
+        private void btn_browser_Click(object sender, RoutedEventArgs e)
+        {
+            string link = ((Button)sender).Tag.ToString();
+            Browser browser = new Browser(link);
+            browser.ShowDialog();
+        }
+
     }
 }

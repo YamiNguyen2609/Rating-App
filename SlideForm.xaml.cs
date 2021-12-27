@@ -27,6 +27,9 @@ namespace Rating_App
         {
             InitializeComponent();
 
+            window.Width = SystemParameters.PrimaryScreenWidth / 2;
+            window.Height = SystemParameters.PrimaryScreenHeight / 2;
+
             FileName = "";
 
             Type = 1;
@@ -132,6 +135,7 @@ namespace Rating_App
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             btn_submit.FontSize = panel.RowDefinitions[5].ActualHeight / 2;
+            txt_path.FontSize = panel.RowDefinitions[3].ActualHeight / 2;
         }
     }
 }

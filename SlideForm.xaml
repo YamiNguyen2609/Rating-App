@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-         Title="Tệp trình chiếu" Width="500" Height="270" Closed="Window_Closed" Loaded="Window_Loaded">
+         Title="Tệp trình chiếu" Width="500" Height="270" Closed="Window_Closed" Loaded="Window_Loaded" Name="window">
 
     <Grid Background="White" Name="panel">
         <Grid.ColumnDefinitions>
@@ -21,9 +21,9 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.15*"/>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition Height="0.4*"/>
-            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
         <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
             <TextBlock Text="Thêm Tệp trình chiếu" FontWeight="Bold" Foreground="LightSkyBlue" VerticalAlignment="Center" />
@@ -31,8 +31,8 @@
         <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" >
             <TextBlock Text="Đường dẫn" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
         </Viewbox>
-        <Button Name="btn_path"  Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btn_path_Click" Style="{DynamicResource button_file}">
-            <TextBlock x:Name="txt_path" Text="Chọn File"/>
+        <Button Name="btn_path" Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btn_path_Click" Style="{DynamicResource button_file}">
+            <TextBlock Margin="20, 0" Foreground="Gray" x:Name="txt_path" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="Chọn File"/>
         </Button>
         <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"  Background="SkyBlue" Foreground="White"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="btn_submit" Click="btn_submit_Click"
             Style="{DynamicResource button}" Content="Thêm"/>
