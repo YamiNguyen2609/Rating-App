@@ -6,33 +6,35 @@
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-         Title="Trình chiếu" Width="500" Height="270" Closed="Window_Closed">
+         Title="Tệp trình chiếu" Width="500" Height="270" Closed="Window_Closed" Loaded="Window_Loaded">
 
-    <Grid Background="White">
+    <Grid Background="White" Name="panel">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="40,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label FontSize="14" VerticalAlignment="Center" Grid.Column="0">Đường dẫn</Label>
-            <Button Name="btn_path" Grid.Column="1" Width="300" Click="btn_path_Click" Style="{DynamicResource button_file}">
-                <Grid Margin="10,0,0,0">
-                    <TextBlock x:Name="txt_path" Text="Chọn File"/>
-                </Grid>
-            </Button>
-        </Grid>
-        <Grid Grid.Row="1"  Margin="40,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        <Button Margin="0,10" Background="SkyBlue" Foreground="White" VerticalAlignment="Top" Grid.Row="2" Name="btn_submit" Click="btn_submit_Click"
+        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+            <TextBlock Text="Thêm Tệp trình chiếu" FontWeight="Bold" Foreground="LightSkyBlue" VerticalAlignment="Center" />
+        </Viewbox>
+        <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" >
+            <TextBlock Text="Đường dẫn" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        </Viewbox>
+        <Button Name="btn_path"  Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btn_path_Click" Style="{DynamicResource button_file}">
+            <TextBlock x:Name="txt_path" Text="Chọn File"/>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"  Background="SkyBlue" Foreground="White"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="btn_submit" Click="btn_submit_Click"
             Style="{DynamicResource button}" Content="Thêm"/>
     </Grid>
 </Window>
