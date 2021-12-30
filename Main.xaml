@@ -16,11 +16,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel x:Name="panel" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Button Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent" Name="btn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="0"  TabIndex="100" Canvas.Top="5" Canvas.Right="5" Name="btn_home" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
+        <Button Grid.Column="1" Grid.Row="0"  TabIndex="100" Name="btn_home" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
             <Image Source="images/ic-home.png"/>
         </Button>
         <Grid Grid.ColumnSpan="2" Grid.RowSpan="3"  x:Name="panel_rating" Panel.ZIndex="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">

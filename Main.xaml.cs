@@ -28,6 +28,7 @@ namespace Rating_App
         private int CurrentIndex = -1;
         private System.Timers.Timer interval;
         private DateTime Expried;
+        private int time = 5;
         public Main()
         {
             using var db = new ModelContext();
@@ -38,7 +39,7 @@ namespace Rating_App
             }
             if (!db.ConfigModel.Any())
             {
-                Expried = DateTime.Parse(DateTime.Now.AddYears(2).ToString("yyyy-MM-dd 23:59:59"));
+                Expried = DateTime.Parse(DateTime.Now.AddDays(30).ToString("yyyy-MM-dd 23:59:59"));
 
                 db.ConfigModel.AddRange(new ConfigModel[]
                 {
@@ -64,7 +65,7 @@ namespace Rating_App
 
             interval = new System.Timers.Timer()
             {
-                Interval = TimeSpan.FromSeconds(10).TotalSeconds * 1000,
+                Interval = TimeSpan.FromSeconds(60).TotalSeconds * 1000,
                 Enabled = true
             };
 
@@ -108,7 +109,7 @@ namespace Rating_App
                         catch { }
                         Thread thread = new Thread(() =>
                         {
-                            Thread.Sleep(TimeSpan.FromSeconds(3));
+                            Thread.Sleep(TimeSpan.FromSeconds(time));
                             OnMove();
                         });
 
@@ -133,7 +134,7 @@ namespace Rating_App
                 {
                     Thread thread = new Thread(() =>
                     {
-                        Thread.Sleep(TimeSpan.FromSeconds(3));
+                        Thread.Sleep(TimeSpan.FromSeconds(time));
                         OnMove();
                     });
 
@@ -174,12 +175,12 @@ namespace Rating_App
         {
             using var db = new ModelContext();
 
-            string Id = "1";
+            int Id = 1;
 
             IQueryable<RatingModel> data = db.RatingModel;
             var item = data.OrderByDescending(x => x.Id).FirstOrDefault();
 
-            if (item != null) Id = item.Id;
+            if (item != null) Id = int.Parse(item.Id) + 1;
 
             string param = ((Button)sender).Tag.ToString();
 
@@ -187,7 +188,7 @@ namespace Rating_App
 
             RatingModel model = new RatingModel()
             {
-                Id = Id,
+                Id = Id.ToString(),
                 Type = spl[0],
                 State = spl[1] == 1,
                 CreateAt = DateTime.Now
@@ -202,10 +203,16 @@ namespace Rating_App
 
         private void Execute(Object source, System.Timers.ElapsedEventArgs e)
         {
-            if(DateTime.Now >= Expried)
+            Dispatcher.Invoke(() =>
             {
-                string x = "";
-            }
+                if (DateTime.Now >= Expried)
+                {
+                    MessageBoxResult result = MessageBox.Show("Phiên bản hiện tại đã hết hạn sử dụng", "Cảnh báo", MessageBoxButton.OK);
+
+                    if (MessageBoxResult.OK == result)
+                        Application.Current.Shutdown();
+                }
+            });
         }
 
         private void btn_browser_Click(object sender, RoutedEventArgs e)

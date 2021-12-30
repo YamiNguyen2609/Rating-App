@@ -55,18 +55,6 @@ namespace Rating_App
             Press_Control(btn.Name);
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            double height = SystemParameters.PrimaryScreenHeight;
-
-            btn_config.Height = height / 10;
-            btn_config_slide.Height = height / 10;
-
-            btn_config.FontSize = btn_config_slide.ActualHeight / 2;
-            btn_config_slide.FontSize = btn_config_slide.ActualHeight / 2;
-            btn_exit.FontSize = btn_exit.ActualHeight / 2;
-        }
-
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

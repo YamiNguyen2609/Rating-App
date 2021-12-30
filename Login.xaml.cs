@@ -40,12 +40,5 @@ namespace Rating_App
                 admin.ShowDialog();
             }
         }
-
-        private void panel_Loaded(object sender, RoutedEventArgs e)
-        {
-            txt_username.FontSize = panel.RowDefinitions[3].ActualHeight / 2;
-            txt_password.FontSize = panel.RowDefinitions[5].ActualHeight / 2;
-            btn_login.FontSize = panel.RowDefinitions[7].ActualHeight / 2;
-        }
     }
 }

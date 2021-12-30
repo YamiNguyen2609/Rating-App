@@ -9,10 +9,10 @@
          WindowState="Maximized"
         Width="1000"
         Height="1000"
-        Title="Admin" Loaded="Window_Loaded">
+        Title="Admin">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0" Background="LightGray">

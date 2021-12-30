@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Rating_App\\Rating_App.csproj": {}
+    "D:\\Project\\c#\\Rating-App\\Rating_App.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Rating_App\\Rating_App.csproj": {
+    "D:\\Project\\c#\\Rating-App\\Rating_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Rating_App\\Rating_App.csproj",
+        "projectUniqueName": "D:\\Project\\c#\\Rating-App\\Rating_App.csproj",
         "projectName": "Rating_App",
-        "projectPath": "C:\\Projects\\Rating_App\\Rating_App.csproj",
-        "packagesPath": "C:\\Users\\Yami Nguyen\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Rating_App\\obj\\",
+        "projectPath": "D:\\Project\\c#\\Rating-App\\Rating_App.csproj",
+        "packagesPath": "C:\\Users\\thuan.nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\c#\\Rating-App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Yami Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thuan.nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,12 +45,25 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "CSVLibraryAK": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "CSVLibraryAK.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.Toolkit.Wpf.UI.Controls.WebView": {
+              "target": "Package",
+              "version": "[6.1.2, )"
             }
           },
           "imports": [
+            "uap10.0.18362",
             "net461",
             "net462",
             "net47",
@@ -66,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,19 +22,19 @@ namespace Rating_App
     {
         private DispatcherTimer timer;
 
-        public Browser(string Link)
+        private string Link;
+
+        public Browser(string _link)
         {
-            InitializeComponent();
+            Link = _link;
 
-            web_browser.Source = new Uri(Link);
-
-            StartCloseTimer();
+            InitializeComponent();    
         }
 
         private void StartCloseTimer()
         {
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(10);
+            timer.Interval = TimeSpan.FromSeconds(30);
             timer.Tick += TimerTick;
             timer.Start();
         }
@@ -45,10 +47,16 @@ namespace Rating_App
             Close();
         }
 
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (timer != null) timer.Stop();
+            web_browser.Source = new Uri(Link);
+
             StartCloseTimer();
+        }
+
+        private void web_browser_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("click ne");
         }
     }
 }

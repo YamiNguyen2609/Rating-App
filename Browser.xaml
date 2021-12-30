@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         WindowState="Maximized"
-        WindowStyle="None">
-    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-        <WebBrowser x:Name="web_browser" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonDown="Grid_MouseLeftButtonDown"/>
+        WindowStyle="None" Loaded="Window_Loaded">
+    <Grid>
+        <WPF:WebView x:Name="web_browser" MouseLeftButtonUp="web_browser_MouseLeftButtonUp"/>
     </Grid>
 </Window>
