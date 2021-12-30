@@ -34,7 +34,7 @@ namespace Rating_App
         private void StartCloseTimer()
         {
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(30);
+            timer.Interval = TimeSpan.FromSeconds(60);
             timer.Tick += TimerTick;
             timer.Start();
         }

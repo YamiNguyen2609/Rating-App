@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "JcqtG8YkTwVoCXROKlPynNWz5AynNoqVW8Ryj7HlCTfYmpST83e9LrMLSDdOSlHytV4PW1AXfk2dK8QvqyLQDQ==",
+  "dgSpecHash": "Xl3zGprVlWFr82eGbeBaXwBdO6aPoNHUeOCrShWhzhDyqF1wa0CinWSx2AGDMYQjOz1R3Wky5xqqORj996xWtg==",
   "success": true,
   "projectFilePath": "D:\\Project\\c#\\Rating-App\\Rating_App.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\thuan.nguyen\\.nuget\\packages\\csvlibraryak\\1.1.4\\csvlibraryak.1.1.4.nupkg.sha512",
-    "C:\\Users\\thuan.nguyen\\.nuget\\packages\\csvlibraryak.core\\1.0.0\\csvlibraryak.core.1.0.0.nupkg.sha512",
     "C:\\Users\\thuan.nguyen\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\thuan.nguyen\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\thuan.nguyen\\.nuget\\packages\\microsoft.data.sqlite.core\\3.1.0\\microsoft.data.sqlite.core.3.1.0.nupkg.sha512",
@@ -43,16 +41,5 @@
     "C:\\Users\\thuan.nguyen\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
     "C:\\Users\\thuan.nguyen\\.nuget\\packages\\system.text.json\\4.7.0\\system.text.json.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'CSVLibraryAK 1.1.4' was restored using 'UAP,Version=v10.0.18362, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "CSVLibraryAK",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }

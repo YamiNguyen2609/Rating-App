@@ -27,7 +27,9 @@ namespace Rating_App
         private SlideModel CurrentItem;
         private int CurrentIndex = -1;
         private System.Timers.Timer interval;
+        private System.Timers.Timer interval1;
         private DateTime Expried;
+        private int time_counter = 2;
         private int time = 5;
         public Main()
         {
@@ -198,7 +200,16 @@ namespace Rating_App
 
             db.SaveChanges();
 
-            panel_rating.Visibility = Visibility.Hidden;
+            txt.Text = "Cảm ơn bạn đã đánh giá (Đóng sau " + time_counter + "s...)";
+            panel_thanks.Visibility = Visibility.Visible;
+
+            interval1 = new System.Timers.Timer()
+            {
+                Interval = TimeSpan.FromSeconds(time_counter).TotalSeconds * 1000,
+                Enabled = true
+            };
+
+            interval1.Elapsed += this.Execute1;
         }
 
         private void Execute(Object source, System.Timers.ElapsedEventArgs e)
@@ -215,6 +226,26 @@ namespace Rating_App
             });
         }
 
+        private void Execute1(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                if (time_counter > 1)
+                {
+                    time_counter -= 1;
+                    txt.Text = "Cảm ơn bạn đã đánh giá (Đóng sau " + time_counter + "s...)";
+                    panel_thanks.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    interval1.Close();
+                    panel_thanks.Visibility = Visibility.Hidden;
+                    time_counter = 2;
+
+                }
+            });
+        }
+
         private void btn_browser_Click(object sender, RoutedEventArgs e)
         {
             string link = ((Button)sender).Tag.ToString();
@@ -222,5 +253,15 @@ namespace Rating_App
             browser.ShowDialog();
         }
 
+        private void main_window_Loaded(object sender, RoutedEventArgs e)
+        {
+            panel_rating.Visibility = Visibility.Visible;
+            StartCloseTimer();
+        }
+
+        private void main_window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            main_window.WindowState = WindowState.Maximized;
+        }
     }
 }

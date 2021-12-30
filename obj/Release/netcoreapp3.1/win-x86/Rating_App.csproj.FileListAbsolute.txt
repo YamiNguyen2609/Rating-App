@@ -4,8 +4,6 @@ D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Rating_App.runtimecon
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Rating_App.runtimeconfig.dev.json
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Rating_App.dll
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Rating_App.pdb
-D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\CSVLibraryAK.dll
-D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\CSVLibraryAK.Core.dll
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Microsoft.Bcl.HashCode.dll
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\win-x86\Microsoft.Data.Sqlite.dll

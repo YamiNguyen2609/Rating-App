@@ -61,7 +61,7 @@ namespace Rating_App {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Rating_App;V1.0.0.0;component/report.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Rating_App;component/report.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Report.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

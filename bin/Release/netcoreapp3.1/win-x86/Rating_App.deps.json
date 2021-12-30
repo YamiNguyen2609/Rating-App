@@ -9,8 +9,6 @@
     ".NETCoreApp,Version=v3.1/win-x86": {
       "Rating_App/1.0.0": {
         "dependencies": {
-          "CSVLibraryAK": "1.1.4",
-          "CSVLibraryAK.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.0",
           "Microsoft.Toolkit.Wpf.UI.Controls.WebView": "6.1.2",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x86": "3.1.22",
@@ -1067,22 +1065,6 @@
           }
         }
       },
-      "CSVLibraryAK/1.1.4": {
-        "runtime": {
-          "lib/net48/CSVLibraryAK.dll": {
-            "assemblyVersion": "1.1.4.0",
-            "fileVersion": "1.1.4.0"
-          }
-        }
-      },
-      "CSVLibraryAK.Core/1.0.0": {
-        "runtime": {
-          "lib/netcoreapp3.1/CSVLibraryAK.Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -1405,20 +1387,6 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
-    },
-    "CSVLibraryAK/1.1.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-JL9fOfbbwXGGnm22q81bDTkc+XTS3wI65RoxZjngq4WKSfz81ZAniUhobVEoxezrlEcPRdYG/HEz2x2ntUdBcw==",
-      "path": "csvlibraryak/1.1.4",
-      "hashPath": "csvlibraryak.1.1.4.nupkg.sha512"
-    },
-    "CSVLibraryAK.Core/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cohGNDLZxb82U86VvD43b4q3fJObyvmXpGw3ce/IVlegML5QZ+vBCRP2OnTe9Pi50HEkeblz3pThRAE4Rl0n7w==",
-      "path": "csvlibraryak.core/1.0.0",
-      "hashPath": "csvlibraryak.core.1.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",

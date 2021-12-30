@@ -27,9 +27,9 @@
         
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="Đăng nhập" FontSize="40" FontWeight="Bold" Foreground="LightSkyBlue" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock  Grid.Row="2" Grid.Column="1"  Text="Username" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-        <TextBox Grid.Row="2" Grid.Column="2"  FontSize="25"  Height="80" Background="Red"  Name="txt_username" Style="{DynamicResource textbox}"/>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Password" FontSize="25" VerticalAlignment="Center" />
-        <PasswordBox Grid.Row="3"  FontSize="25" Grid.Column="2" Height="80" PasswordChar="*" Name="txt_password" Style="{DynamicResource passwordbox}"/>
+        <TextBox Grid.Row="2" Grid.Column="2"  FontSize="30"  Height="65" Background="Red"  Name="txt_username" Style="{DynamicResource textbox}"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Password" FontSize="30" VerticalAlignment="Center" />
+        <PasswordBox Grid.Row="3"  FontSize="25" Grid.Column="2" Height="65" PasswordChar="*" Name="txt_password" Style="{DynamicResource passwordbox}"/>
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Background="SkyBlue" Foreground="White" Height="80"  Name="btn_login" Click="Btn_login_Click"
             Style="{DynamicResource button}" Content="Đăng nhập"/>
     </Grid>

@@ -2,24 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "CSVLibraryAK/1.1.4": {
-        "type": "package",
-        "compile": {
-          "lib/net48/CSVLibraryAK.dll": {}
-        },
-        "runtime": {
-          "lib/net48/CSVLibraryAK.dll": {}
-        }
-      },
-      "CSVLibraryAK.Core/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/CSVLibraryAK.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/CSVLibraryAK.Core.dll": {}
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "type": "package",
         "compile": {
@@ -585,24 +567,6 @@
       }
     },
     ".NETCoreApp,Version=v3.1/win-x86": {
-      "CSVLibraryAK/1.1.4": {
-        "type": "package",
-        "compile": {
-          "lib/net48/CSVLibraryAK.dll": {}
-        },
-        "runtime": {
-          "lib/net48/CSVLibraryAK.dll": {}
-        }
-      },
-      "CSVLibraryAK.Core/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/CSVLibraryAK.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/CSVLibraryAK.Core.dll": {}
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "type": "package",
         "compile": {
@@ -1110,36 +1074,6 @@
     }
   },
   "libraries": {
-    "CSVLibraryAK/1.1.4": {
-      "sha512": "JL9fOfbbwXGGnm22q81bDTkc+XTS3wI65RoxZjngq4WKSfz81ZAniUhobVEoxezrlEcPRdYG/HEz2x2ntUdBcw==",
-      "type": "package",
-      "path": "csvlibraryak/1.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "csvlibraryak.1.1.4.nupkg.sha512",
-        "csvlibraryak.nuspec",
-        "lib/net48/CSVLibraryAK.dll",
-        "lib/net48/CSVLibraryAK.xml",
-        "logo-512x512.png"
-      ]
-    },
-    "CSVLibraryAK.Core/1.0.0": {
-      "sha512": "cohGNDLZxb82U86VvD43b4q3fJObyvmXpGw3ce/IVlegML5QZ+vBCRP2OnTe9Pi50HEkeblz3pThRAE4Rl0n7w==",
-      "type": "package",
-      "path": "csvlibraryak.core/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "csvlibraryak.core.1.0.0.nupkg.sha512",
-        "csvlibraryak.core.nuspec",
-        "lib/netcoreapp3.1/CSVLibraryAK.Core.dll",
-        "lib/netcoreapp3.1/CSVLibraryAK.Core.xml",
-        "logo-512x512.png"
-      ]
-    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
       "type": "package",
@@ -2105,8 +2039,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "CSVLibraryAK >= 1.1.4",
-      "CSVLibraryAK.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.0",
       "Microsoft.Toolkit.Wpf.UI.Controls.WebView >= 6.1.2"
     ]
@@ -2157,14 +2089,6 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
-          "CSVLibraryAK": {
-            "target": "Package",
-            "version": "[1.1.4, )"
-          },
-          "CSVLibraryAK.Core": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[3.1.0, )"
@@ -2214,17 +2138,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'CSVLibraryAK 1.1.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "CSVLibraryAK",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

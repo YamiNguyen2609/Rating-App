@@ -131,11 +131,5 @@ namespace Rating_App
         {
             ConfigPage.Refresh();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            btn_submit.FontSize = panel.RowDefinitions[5].ActualHeight / 2;
-            txt_path.FontSize = panel.RowDefinitions[3].ActualHeight / 2;
-        }
     }
 }

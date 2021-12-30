@@ -7,7 +7,9 @@
         xmlns:local="clr-namespace:Rating_App"
         mc:Ignorable="d"
         WindowState="Maximized"
-        WindowStyle="None" Loaded="Window_Loaded">
+        WindowStyle="ToolWindow" 
+        Title=""
+        Loaded="Window_Loaded">
     <Grid>
         <WPF:WebView x:Name="web_browser" MouseLeftButtonUp="web_browser_MouseLeftButtonUp"/>
     </Grid>
