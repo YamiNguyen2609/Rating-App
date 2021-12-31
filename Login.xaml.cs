@@ -33,12 +33,23 @@ namespace Rating_App
 
             var username = db.ConfigModel.Find(new string[] { "username" });
             var password = db.ConfigModel.Find(new string[] { "password" });
-            if (txt_username.Text == username.Value && txt_password.Password == password.Value)
+            var username_admin = db.ConfigModel.Find(new string[] { "username_admin" });
+            var password_admin = db.ConfigModel.Find(new string[] { "password_admin" });
+            if ((txt_username.Text == username.Value && txt_password.Password == password.Value) || (txt_username.Text == username_admin.Value && txt_password.Password == password_admin.Value))
             {
                 this.Close();
                 Admin admin = new Admin();
                 admin.ShowDialog();
             }
+            else
+            {
+                txt_error.Text = "Tên đăng nhập hoặc mật khẩu không chính xác";
+            }
+        }
+
+        private void TextBlock_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txt_error.Text = "";
         }
     }
 }

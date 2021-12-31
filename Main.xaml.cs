@@ -47,6 +47,8 @@ namespace Rating_App
                 {
                     new ConfigModel{Key = "username", Value = "admin"},
                     new ConfigModel{Key = "password", Value = "password"},
+                    new ConfigModel{Key = "username_admin", Value = "admin"},
+                    new ConfigModel{Key = "password_admin", Value = "password"},
                     new ConfigModel{Key = "expried", Value = Expried.ToString("yyyy-MM-dd HH:mm:ss")},
                 });
 

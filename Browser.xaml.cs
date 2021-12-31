@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
+﻿
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Rating_App
@@ -49,14 +39,11 @@ namespace Rating_App
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            web_browser.Source = new Uri(Link);
+            // var env = await CoreWebView2Environment.CreateAsync(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Webview.Support");
+            //await web_browser.EnsureCoreWebView2Async(env);
+                web_browser.Source = new Uri(Link);
 
             StartCloseTimer();
-        }
-
-        private void web_browser_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("click ne");
         }
     }
 }
