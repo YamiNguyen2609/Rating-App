@@ -21,7 +21,7 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <StackPanel x:Name="panel" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <StackPanel x:Name="panel" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
         <Button Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent" Name="btn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
         <Button Grid.Column="1" Grid.Row="0"  TabIndex="100" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Height="40" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
             <Image Source="images/ic-home.png"/>

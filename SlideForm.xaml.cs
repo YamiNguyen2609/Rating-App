@@ -81,49 +81,58 @@ namespace Rating_App
             using var db = new ModelContext();
             string name = txt_path.Text;
 
-
-            if (!File.Exists(name))
+            try
             {
-                string folder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Slide/";
-
-                if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
-
-                File.Copy(FileName, folder + name, true);
-            }
-
-            if (model == null)
-            {
-                IQueryable<SlideModel> data = db.SlideModel;
-                var item = data.OrderByDescending(x => x.Index).FirstOrDefault();
-                int Index = 1;
-                if (item != null)
-                    Index = item.Index + 1;
-
-                db.SlideModel.Add(new SlideModel()
+                if (!File.Exists(name))
                 {
-                    Id = Index,
-                    Path = name,
-                    Type = Type,
-                    Index = Index
-                });
+                    string folder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Slide/";
 
-                db.SaveChanges();
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
-                MessageBox.Show("Thêm File thành công");
-            }
-            else
-            {
-                db.SlideModel.Update(new SlideModel()
+                    File.Copy(FileName, folder + name, true);
+                }
+
+                if (model == null)
                 {
-                    Id = model.Id,
-                    Path = name,
-                    Type = Type,
-                    Index = model.Index
-                });
+                    IQueryable<SlideModel> data = db.SlideModel;
+                    var item = data.OrderByDescending(x => x.Index).FirstOrDefault();
+                    int Index = 1;
+                    int id = 1;
+                    if (item != null)
+                    {
+                        id = item.Id + 1;
+                        Index = item.Index + 1;
+                    }
+                    db.SlideModel.Add(new SlideModel()
+                    {
+                        Id = id,
+                        Path = name,
+                        Type = Type,
+                        Index = Index
+                    });
 
-                db.SaveChanges();
+                    db.SaveChanges();
 
-                MessageBox.Show("Cập nhật File thành công");
+                    MessageBox.Show("Thêm File thành công");
+                }
+                else
+                {
+                    db.SlideModel.Update(new SlideModel()
+                    {
+                        Id = model.Id,
+                        Path = name,
+                        Type = Type,
+                        Index = model.Index
+                    });
+
+                    db.SaveChanges();
+
+                    MessageBox.Show("Cập nhật File thành công");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 

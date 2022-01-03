@@ -31,6 +31,7 @@ namespace Rating_App
         private DateTime Expried;
         private int time_counter = 2;
         private int time = 5;
+        private DispatcherTimer timer;
         public Main()
         {
             using var db = new ModelContext();
@@ -161,15 +162,14 @@ namespace Rating_App
 
         private void StartCloseTimer()
         {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(30);
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(2);
             timer.Tick += TimerTick;
             timer.Start();
         }
 
         private void TimerTick(object sender, EventArgs e)
         {
-            DispatcherTimer timer = (DispatcherTimer)sender;
             timer.Stop();
             timer.Tick -= TimerTick;
             panel_rating.Visibility = Visibility.Hidden;
@@ -177,6 +177,9 @@ namespace Rating_App
 
         private void btn_rating_Click(object sender, RoutedEventArgs e)
         {
+            timer.Stop();
+            timer.Tick -= TimerTick;
+
             using var db = new ModelContext();
 
             int Id = 1;
@@ -243,7 +246,7 @@ namespace Rating_App
                     interval1.Close();
                     panel_thanks.Visibility = Visibility.Hidden;
                     time_counter = 2;
-
+                    StartCloseTimer();
                 }
             });
         }
