@@ -30,7 +30,7 @@ namespace Rating_App
         private System.Timers.Timer interval1;
         private DateTime Expried;
         private int time_counter = 2;
-        private int time = 5;
+        private int time = 30;
         private DispatcherTimer timer;
         public Main()
         {
@@ -42,7 +42,7 @@ namespace Rating_App
             }
             if (!db.ConfigModel.Any())
             {
-                Expried = DateTime.Parse(DateTime.Now.AddDays(30).ToString("yyyy-MM-dd 23:59:59"));
+                Expried = DateTime.Parse("2022-12-31 23:59:59");
 
                 db.ConfigModel.AddRange(new ConfigModel[]
                 {
@@ -107,7 +107,7 @@ namespace Rating_App
                             {
                                 Width = SystemParameters.PrimaryScreenWidth,
                                 Height = SystemParameters.PrimaryScreenHeight,
-                                Source = new BitmapImage(new Uri(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Slide/" + CurrentItem.Path))
+                                Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "/Slide/" + CurrentItem.Path))
                             };
                             panel.Children.Add(image);
                         }
@@ -127,7 +127,7 @@ namespace Rating_App
                         {
                             Width = SystemParameters.PrimaryScreenWidth,
                             Height = SystemParameters.PrimaryScreenHeight,
-                            Source = new Uri(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Slide/" + CurrentItem.Path)
+                            Source = new Uri(Directory.GetCurrentDirectory() + "/Slide/" + CurrentItem.Path)
                         };
 
                         media.MediaEnded += MediaElement_MediaEnded;
@@ -260,7 +260,7 @@ namespace Rating_App
 
         private void main_window_Loaded(object sender, RoutedEventArgs e)
         {
-            panel_rating.Visibility = Visibility.Visible;
+            panel_rating.Visibility = Visibility.Hidden;
             StartCloseTimer();
         }
 

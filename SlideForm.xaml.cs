@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -70,7 +71,7 @@ namespace Rating_App
 
                     string extenionName = System.IO.Path.GetExtension(filename);
 
-                    if(arr_video.IndexOf(extenionName) > -1) Type = 2;
+                    if (arr_video.IndexOf(extenionName) > -1) Type = 2;
                 }
                 txt_path.Text = nameFile;
             }
@@ -80,59 +81,70 @@ namespace Rating_App
         {
             using var db = new ModelContext();
             string name = txt_path.Text;
+            bool isCreateFile = true;
 
             try
             {
                 if (!File.Exists(name))
                 {
-                    string folder = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Slide/";
+                    string folder = Directory.GetCurrentDirectory() + "/Slide/";
 
                     if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
                     File.Copy(FileName, folder + name, true);
                 }
-
-                if (model == null)
-                {
-                    IQueryable<SlideModel> data = db.SlideModel;
-                    var item = data.OrderByDescending(x => x.Index).FirstOrDefault();
-                    int Index = 1;
-                    int id = 1;
-                    if (item != null)
-                    {
-                        id = item.Id + 1;
-                        Index = item.Index + 1;
-                    }
-                    db.SlideModel.Add(new SlideModel()
-                    {
-                        Id = id,
-                        Path = name,
-                        Type = Type,
-                        Index = Index
-                    });
-
-                    db.SaveChanges();
-
-                    MessageBox.Show("Thêm File thành công");
-                }
-                else
-                {
-                    db.SlideModel.Update(new SlideModel()
-                    {
-                        Id = model.Id,
-                        Path = name,
-                        Type = Type,
-                        Index = model.Index
-                    });
-
-                    db.SaveChanges();
-
-                    MessageBox.Show("Cập nhật File thành công");
-                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                isCreateFile = false;
+                MessageBox.Show("Tao File - " + ex.Message.ToString());
+            }
+            if (isCreateFile)
+            {
+                try
+                {
+                    if (model == null)
+                    {
+                        IQueryable<SlideModel> data = db.SlideModel;
+                        var item = data.OrderByDescending(x => x.Index).FirstOrDefault();
+                        int Index = 1;
+                        int id = 1;
+                        if (item != null)
+                        {
+                            id = item.Id + 1;
+                            Index = item.Index + 1;
+                        }
+                        db.SlideModel.Add(new SlideModel()
+                        {
+                            Id = id,
+                            Path = name,
+                            Type = Type,
+                            Index = Index
+                        });
+
+                        db.SaveChanges();
+
+                        MessageBox.Show("Thêm File thành công");
+                    }
+                    else
+                    {
+                        db.SlideModel.Update(new SlideModel()
+                        {
+                            Id = model.Id,
+                            Path = name,
+                            Type = Type,
+                            Index = model.Index
+                        });
+
+                        db.SaveChanges();
+
+                        MessageBox.Show("Cập nhật File thành công");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Insert db - " + ex.Message.ToString());
+                }
             }
         }
 
