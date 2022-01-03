@@ -260,7 +260,7 @@ namespace Rating_App
 
         private void main_window_Loaded(object sender, RoutedEventArgs e)
         {
-            panel_rating.Visibility = Visibility.Hidden;
+            //panel_rating.Visibility = Visibility.Hidden;
             StartCloseTimer();
         }
 

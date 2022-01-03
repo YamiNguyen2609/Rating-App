@@ -26,7 +26,7 @@
         <Button Grid.Column="1" Grid.Row="0"  TabIndex="100" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Height="40" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
             <Image Source="images/ic-home.png"/>
         </Button>
-        <Grid Grid.ColumnSpan="2" Grid.RowSpan="3"  x:Name="panel_rating" Panel.ZIndex="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">
+        <Grid Grid.ColumnSpan="2" Grid.RowSpan="3"  x:Name="panel_rating" Panel.ZIndex="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible">
             <Grid.Background>
                 <ImageBrush ImageSource="/images/man-hinh-khao-sat.jpg"/>
             </Grid.Background>

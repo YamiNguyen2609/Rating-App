@@ -93,7 +93,7 @@ namespace Rating_App {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Rating_App;V1.0.0.0;component/slideform.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Rating_App;component/slideform.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SlideForm.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
