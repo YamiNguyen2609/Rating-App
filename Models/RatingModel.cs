@@ -24,8 +24,8 @@ namespace Rating_App.Models
     {
         public string Type { get; set; }
 
-        public string State { get; set; }
+        public string Like { get; set; }
 
-        public string CreateAt { get; set; }
+        public string DisLike { get; set; }
     }
 }

@@ -270,10 +270,5 @@ namespace Rating_App
             //panel_rating.Visibility = Visibility.Hidden;
             StartCloseTimer();
         }
-
-        private void main_window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            main_window.WindowState = WindowState.Maximized;
-        }
     }
 }

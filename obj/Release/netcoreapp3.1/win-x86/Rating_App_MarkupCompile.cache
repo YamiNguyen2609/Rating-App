@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Project\c#\Rating-App\obj\Release\netcoreapp3.1\win-x86\
+C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\
 Rating_App
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-D:\Project\c#\Rating-App\App.xaml
+C:\Projects\Rating_App\App.xaml
 9-1207109358
-1944880523
+11155902625
 1434689751
-309-685564509
+309192217773
 Admin.xaml;Browser.xaml;Config.xaml;Login.xaml;Main.xaml;Rating.xaml;Report.xaml;SlideForm.xaml;Templates.xaml;
 
 False

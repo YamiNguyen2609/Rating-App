@@ -10,7 +10,7 @@
         Width="500"
         Height="500"
         WindowStyle="ThreeDBorderWindow" 
-       Loaded="main_window_Loaded" MouseDoubleClick="main_window_MouseDoubleClick">
+       Loaded="main_window_Loaded">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,7 +26,7 @@
         <Button Grid.Column="1" Grid.Row="0"  TabIndex="100" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Height="40" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
             <Image Source="images/ic-home.png"/>
         </Button>
-        <Grid Grid.ColumnSpan="2" Grid.RowSpan="3"  x:Name="panel_rating" Panel.ZIndex="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible">
+        <Grid Grid.ColumnSpan="2" Grid.RowSpan="3"  x:Name="panel_rating" Panel.ZIndex="1000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" >
             <Grid.Background>
                 <ImageBrush ImageSource="/images/man-hinh-khao-sat.jpg"/>
             </Grid.Background>
@@ -63,6 +63,19 @@
             <Button Grid.Column="3" Grid.Row="3" Style="{DynamicResource button_rating}" Tag="1-0" Click="btn_rating_Click"/>
             <Button Grid.Column="3" Grid.Row="5" Style="{DynamicResource button_rating}" Tag="2-0" Click="btn_rating_Click"/>
             <Button Grid.Column="3" Grid.Row="7" Style="{DynamicResource button_rating}" Tag="3-0" Click="btn_rating_Click"/>
+            <Grid Grid.Row="1" Grid.Column="5" Grid.RowSpan="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.28*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.31*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.305*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="https://docs.google.com/forms/d/1kf0exKqqIq7lmNSrsgg49AgIO_LqL-_vKra9di8plKw/viewform?edit_requested=true" Click="btn_browser_Click"/>
+            </Grid>
         </Grid>
         <Grid Grid.ColumnSpan="3" Grid.RowSpan="3"  x:Name="panel_thanks"  Panel.ZIndex="1001" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">
             <Grid.ColumnDefinitions>

@@ -97,7 +97,6 @@ C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dl
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Toolkit.Wpf.UI.Controls.WebView.dll
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Projects\Rating_App\bin\Release\netcoreapp3.1\SQLitePCLRaw.core.dll
@@ -152,3 +151,10 @@ D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Core.d
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
 D:\Project\c#\Rating-App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
 D:\Project\c#\Rating-App\obj\Release\netcoreapp3.1\Rating_App_Content.g.cs
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\runtimes\win-x86\native\WebView2Loader.dll
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\runtimes\win-x64\native\WebView2Loader.dll
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Core.dll
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
+C:\Projects\Rating_App\bin\Release\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
+C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating_App_Content.g.cs

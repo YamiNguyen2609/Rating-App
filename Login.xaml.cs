@@ -25,6 +25,7 @@ namespace Rating_App
 
             window.Width = SystemParameters.PrimaryScreenWidth /2;
             window.Height = SystemParameters.PrimaryScreenHeight / 2;
+            txt_username.Focus();
         }
 
         private void Btn_login_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,37 @@ namespace Rating_App
         private void TextBlock_GotFocus(object sender, RoutedEventArgs e)
         {
             txt_error.Text = "";
+        }
+
+        private void txt_username_TouchEnter(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                txt_password.Focus();
+            }
+        }
+
+        private void txt_password_TouchEnter(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                using var db = new ModelContext();
+
+                var username = db.ConfigModel.Find(new string[] { "username" });
+                var password = db.ConfigModel.Find(new string[] { "password" });
+                var username_admin = db.ConfigModel.Find(new string[] { "username_admin" });
+                var password_admin = db.ConfigModel.Find(new string[] { "password_admin" });
+                if ((txt_username.Text == username.Value && txt_password.Password == password.Value) || (txt_username.Text == username_admin.Value && txt_password.Password == password_admin.Value))
+                {
+                    this.Close();
+                    Admin admin = new Admin();
+                    admin.ShowDialog();
+                }
+                else
+                {
+                    txt_error.Text = "Tên đăng nhập hoặc mật khẩu không chính xác";
+                }
+            }
         }
     }
 }

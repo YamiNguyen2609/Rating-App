@@ -33,26 +33,26 @@
             <DatePicker Name="date_end" SelectedDateChanged="date_SelectedDateChanged"  />
         </Viewbox>
         <Button x:Name="btn" Foreground="White"  Height="50" Width="200" Click="btn_Click" FontSize="25" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="1" Content="Xuất báo cáo" Style="{DynamicResource button}" Background="SkyBlue"/>
-        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Name="list_item" Background="White" BorderThickness="0">
+        <DataGrid IsReadOnly="True" Height="310" VerticalAlignment="Top" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Name="list_item" Background="White" BorderThickness="0">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Width="1*" CanUserResize="True" Header="Bộ phận">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Margin="10,20" VerticalAlignment="Center" FontSize="20" Text="{Binding Path=Type}" />
+                            <TextBlock Margin="10,20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="{Binding Path=Type}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="0.75*" CanUserResize="False" Header="Đánh giá">
+                <DataGridTemplateColumn Width="0.75*" CanUserResize="False" Header="Lượt thích">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Margin="10,20" VerticalAlignment="Center" FontSize="20" Text="{Binding Path=State}" />
+                            <TextBlock Margin="10,20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="{Binding Path=Like}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="1*" CanUserResize="False" Header="Thời gian">
+                <DataGridTemplateColumn Width="1*" CanUserResize="False" Header="Lượt không thích">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Margin="10,20" VerticalAlignment="Center" FontSize="20" Text="{Binding Path=CreateAt}" />
+                            <TextBlock Margin="10,20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="{Binding Path=DisLike}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
