@@ -1,5 +1,7 @@
 ﻿
+using Microsoft.Web.WebView2.Core;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -37,12 +39,16 @@ namespace Rating_App
             Close();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // var env = await CoreWebView2Environment.CreateAsync(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/Webview.Support");
-            //await web_browser.EnsureCoreWebView2Async(env);
+            try
+            {
                 web_browser.Source = new Uri(Link);
-
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Browser - " + ex.Message.ToString());
+            }
             StartCloseTimer();
         }
     }

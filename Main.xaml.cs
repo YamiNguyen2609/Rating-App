@@ -177,44 +177,51 @@ namespace Rating_App
 
         private void btn_rating_Click(object sender, RoutedEventArgs e)
         {
-            timer.Stop();
-            timer.Tick -= TimerTick;
-
-            using var db = new ModelContext();
-
-            int Id = 1;
-
-            IQueryable<RatingModel> data = db.RatingModel;
-            var item = data.OrderByDescending(x => x.Id).FirstOrDefault();
-
-            if (item != null) Id = int.Parse(item.Id) + 1;
-
-            string param = ((Button)sender).Tag.ToString();
-
-            int[] spl = param.Split("-").Select(x => int.Parse(x)).ToArray();
-
-            RatingModel model = new RatingModel()
+            try
             {
-                Id = Id.ToString(),
-                Type = spl[0],
-                State = spl[1] == 1,
-                CreateAt = DateTime.Now
-            };
+                timer.Stop();
+                timer.Tick -= TimerTick;
 
-            db.RatingModel.Add(model);
+                using var db = new ModelContext();
 
-            db.SaveChanges();
+                int Id = 1;
 
-            txt.Text = "Cảm ơn bạn đã đánh giá (Đóng sau " + time_counter + "s...)";
-            panel_thanks.Visibility = Visibility.Visible;
+                IQueryable<RatingModel> data = db.RatingModel;
+                var item = data.OrderByDescending(x => x.Id).FirstOrDefault();
 
-            interval1 = new System.Timers.Timer()
+                if (item != null) Id = int.Parse(item.Id) + 1;
+
+                string param = ((Button)sender).Tag.ToString();
+
+                int[] spl = param.Split("-").Select(x => int.Parse(x)).ToArray();
+
+                RatingModel model = new RatingModel()
+                {
+                    Id = Id.ToString(),
+                    Type = spl[0],
+                    State = spl[1] == 1,
+                    CreateAt = DateTime.Now
+                };
+
+                db.RatingModel.Add(model);
+
+                db.SaveChanges();
+
+                txt.Text = "Cảm ơn bạn đã đánh giá (Đóng sau " + time_counter + "s...)";
+                panel_thanks.Visibility = Visibility.Visible;
+
+                interval1 = new System.Timers.Timer()
+                {
+                    Interval = TimeSpan.FromSeconds(time_counter).TotalSeconds * 1000,
+                    Enabled = true
+                };
+
+                interval1.Elapsed += this.Execute1;
+            }
+            catch(Exception ex)
             {
-                Interval = TimeSpan.FromSeconds(time_counter).TotalSeconds * 1000,
-                Enabled = true
-            };
-
-            interval1.Elapsed += this.Execute1;
+                MessageBox.Show("Error Rating - " + ex.Message.ToString());
+            }
         }
 
         private void Execute(Object source, System.Timers.ElapsedEventArgs e)
