@@ -9,11 +9,8 @@
         WindowState="Maximized"
         WindowStyle="ThreeDBorderWindow" 
         Title=""
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" Closed="Window_Closed">
     <DockPanel>
-        <wv2:WebView2 Name="web_browser"
-                      
-                  Source="https://www.microsoft.com"
-    />
+        <wv2:WebView2 Name="web_browser"/>
     </DockPanel>
 </Window>

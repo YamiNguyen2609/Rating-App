@@ -121,7 +121,6 @@ C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Config.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Login.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Main.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating.g.cs
-C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Report.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\SlideForm.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\App.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating_App_MarkupCompile.cache
@@ -133,7 +132,6 @@ C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Config.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Login.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Main.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating.baml
-C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Report.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\SlideForm.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating_App.g.resources
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\Rating_App.GeneratedMSBuildEditorConfig.editorconfig

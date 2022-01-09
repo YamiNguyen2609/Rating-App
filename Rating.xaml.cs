@@ -37,7 +37,7 @@ namespace Rating_App
                 float dislike = data.Where(x => x.Type == i && x.State == false).Count();
                 string type = i == 0 ? "Phòng đào tạo đại học" : i == 1 ? "Phòng đào tạo sau đại học" : i == 2 ? "Phòng công tác sinh viên" : "Trung tâm dịch vụ";
 
-                temp.Add(new RatingViewModel() { Type = type, Like = String.Format("{0}%",(like / total) * 100), DisLike = String.Format("{0}%", (dislike / total) * 100)});
+                temp.Add(new RatingViewModel() { Type = type, Like = String.Format("{0} ({1}%)", like.ToString(), Math.Round((like / total) * 100, 2)), DisLike = String.Format("{0} ({1}%)", dislike.ToString(), Math.Round((dislike / total) * 100), 2) });
             }
 
             list_item.ItemsSource = temp;
@@ -124,7 +124,7 @@ namespace Rating_App
                 float dislike = dataTemp.Where(x => x.Type == i && x.State == false).Count();
                 string type = i == 0 ? "Phòng đào tạo đại học" : i == 1 ? "Phòng đào tạo sau đại học" : i == 2 ? "Phòng công tác sinh viên" : "Trung tâm dịch vụ";
 
-                temp.Add(new RatingViewModel() { Type = type, Like = String.Format("{0}%", ((like / total) * 100)), DisLike = String.Format("{0}%", ((dislike / total) * 100)) });
+                temp.Add(new RatingViewModel() { Type = type, Like = String.Format("{0} ({1}%)", like.ToString(), Math.Round((like / total) * 100, 2)), DisLike = String.Format("{0} ({1}%)", dislike.ToString(), Math.Round((dislike / total) * 100), 2) });
             }
 
             list_item.ItemsSource = temp;

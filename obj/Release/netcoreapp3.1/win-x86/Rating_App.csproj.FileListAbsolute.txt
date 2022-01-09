@@ -579,7 +579,6 @@ C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Config.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Login.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Main.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Rating.g.cs
-C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Report.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\SlideForm.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\App.g.cs
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Rating_App_MarkupCompile.cache
@@ -591,7 +590,6 @@ C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Config.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Login.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Main.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Rating.baml
-C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Report.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\SlideForm.baml
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Rating_App.g.resources
 C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x86\Rating_App.GeneratedMSBuildEditorConfig.editorconfig

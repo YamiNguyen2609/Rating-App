@@ -51,10 +51,10 @@
             <Button Grid.Column="4" Grid.Row="0"  TabIndex="100" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Height="40" Background="Transparent" BorderThickness="0" Click="Btn_home_Click">
                 <Image Source="images/ic-home.png"/>
             </Button>
-            <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="http://www.ctump.edu.vn/Default.aspx?tabid=289" Click="btn_browser_Click"/>
-            <Button Grid.Column="1" Grid.Row="3" Style="{DynamicResource button_rating}" Tag="http://www.ctump.edu.vn/Default.aspx?tabid=579" Click="btn_browser_Click"/>
-            <Button Grid.Column="1" Grid.Row="5" Style="{DynamicResource button_rating}" Tag="http://www.ctump.edu.vn/Default.aspx?tabid=549" Click="btn_browser_Click"/>
-            <Button Grid.Column="1" Grid.Row="7" Style="{DynamicResource button_rating}" Tag="http://www.ctump.edu.vn/Default.aspx?tabid=1432" Click="btn_browser_Click"/>
+            <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="0|http://www.ctump.edu.vn/Default.aspx?tabid=289" Click="btn_browser_Click"/>
+            <Button Grid.Column="1" Grid.Row="3" Style="{DynamicResource button_rating}" Tag="0|http://www.ctump.edu.vn/Default.aspx?tabid=579" Click="btn_browser_Click"/>
+            <Button Grid.Column="1" Grid.Row="5" Style="{DynamicResource button_rating}" Tag="0|http://www.ctump.edu.vn/Default.aspx?tabid=549" Click="btn_browser_Click"/>
+            <Button Grid.Column="1" Grid.Row="7" Style="{DynamicResource button_rating}" Tag="0|http://www.ctump.edu.vn/Default.aspx?tabid=1432" Click="btn_browser_Click"/>
             <Button Grid.Column="2" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="0-1" Click="btn_rating_Click"/>
             <Button Grid.Column="2" Grid.Row="3" Style="{DynamicResource button_rating}" Tag="1-1" Click="btn_rating_Click"/>
             <Button Grid.Column="2" Grid.Row="5" Style="{DynamicResource button_rating}" Tag="2-1" Click="btn_rating_Click"/>
@@ -74,7 +74,7 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="0.305*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="https://docs.google.com/forms/d/1kf0exKqqIq7lmNSrsgg49AgIO_LqL-_vKra9di8plKw/viewform?edit_requested=true" Click="btn_browser_Click"/>
+                <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource button_rating}" Tag="1|https://docs.google.com/forms/d/1kf0exKqqIq7lmNSrsgg49AgIO_LqL-_vKra9di8plKw/viewform?edit_requested=true" Click="btn_browser_Click"/>
             </Grid>
         </Grid>
         <Grid Grid.ColumnSpan="3" Grid.RowSpan="3"  x:Name="panel_thanks"  Panel.ZIndex="1001" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">

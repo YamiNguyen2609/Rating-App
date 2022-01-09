@@ -25,9 +25,6 @@
     <Compile Update="Rating.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Report.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="SlideForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,9 +46,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Rating.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Report.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SlideForm.xaml">

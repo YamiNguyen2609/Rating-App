@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Project\c#\Rating-App\obj\Release\netcoreapp3.1\win-x64\
+C:\Projects\Rating_App\obj\Release\netcoreapp3.1\win-x64\
 Rating_App
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-D:\Project\c#\Rating-App\App.xaml
-9-1207109358
-
-1434689751
-307-2140716204
-Admin.xaml;Browser.xaml;Config.xaml;Login.xaml;Main.xaml;Rating.xaml;Report.xaml;SlideForm.xaml;Templates.xaml;
+C:\Projects\Rating_App\App.xaml
+81162583039
+1-1812457643
+13-294203507
+309192217773
+Admin.xaml;Browser.xaml;Config.xaml;Login.xaml;Main.xaml;Rating.xaml;SlideForm.xaml;Templates.xaml;
 
 False
 

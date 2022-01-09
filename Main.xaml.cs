@@ -187,9 +187,12 @@ namespace Rating_App
                 int Id = 1;
 
                 IQueryable<RatingModel> data = db.RatingModel;
-                var item = data.OrderByDescending(x => x.Id).FirstOrDefault();
+                if (data.Count() > 0)
+                {
+                    var item = data.ToArray()[data.Count() - 1];
 
-                if (item != null) Id = int.Parse(item.Id) + 1;
+                    if (item != null) Id = int.Parse(item.Id) + 1;
+                }
 
                 string param = ((Button)sender).Tag.ToString();
 
@@ -261,7 +264,8 @@ namespace Rating_App
         private void btn_browser_Click(object sender, RoutedEventArgs e)
         {
             string link = ((Button)sender).Tag.ToString();
-            Browser browser = new Browser(link);
+            string[] spl = link.Split("|");
+            Browser browser = new Browser(spl[1], spl[0] == "1");
             browser.ShowDialog();
         }
 

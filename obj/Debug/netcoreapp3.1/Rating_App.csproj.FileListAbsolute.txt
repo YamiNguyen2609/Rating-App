@@ -142,8 +142,6 @@ D:\Project\c#\Rating-App\obj\Debug\netcoreapp3.1\Rating_App.csproj.CopyComplete
 D:\Project\c#\Rating-App\obj\Debug\netcoreapp3.1\Rating_App.dll
 D:\Project\c#\Rating-App\obj\Debug\netcoreapp3.1\Rating_App.pdb
 D:\Project\c#\Rating-App\obj\Debug\netcoreapp3.1\Rating_App.genruntimeconfig.cache
-C:\Projects\Rating_App\obj\Debug\netcoreapp3.1\Report.g.cs
-C:\Projects\Rating_App\obj\Debug\netcoreapp3.1\Report.baml
 D:\Project\c#\Rating-App\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.Core.dll
 D:\Project\c#\Rating-App\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
 D:\Project\c#\Rating-App\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
